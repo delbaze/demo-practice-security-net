@@ -1,0 +1,6 @@
+@demo_practice_security_net_HostAddress = http://localhost:5281
+
+GET {{demo_practice_security_net_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
