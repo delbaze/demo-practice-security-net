@@ -24,7 +24,11 @@ namespace DemoPracticeSecurityNet.Controllers
         public async Task<ActionResult<User>> GetUserProfile(int id)
         {
             var user = await _context.Users.FindAsync(id);
-            return user; // Renvoie toutes les données sans vérification
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return user;
         }
 
         // Injection SQL
@@ -36,9 +40,19 @@ namespace DemoPracticeSecurityNet.Controllers
             connection.Open();
             using var command = new SqlCommand($"SELECT * FROM Users WHERE Username LIKE '%{query}%'", connection);
             var reader = command.ExecuteReader();
-            var dt = new DataTable();
-            dt.Load(reader);
-            return Ok(dt);
+
+            var result = new List<Dictionary<string, object>>();
+            while (reader.Read())
+            {
+                var row = new Dictionary<string, object>();
+                for (int i = 0; i < reader.FieldCount; i++)
+                {
+                    row[reader.GetName(i)] = reader.GetValue(i);
+                }
+                result.Add(row);
+            }
+
+            return Ok(result);
         }
 
         // XSS
