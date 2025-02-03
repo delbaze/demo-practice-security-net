@@ -55,14 +55,44 @@ namespace DemoPracticeSecurityNet.Controllers
             return Ok(result);
         }
 
-        // XSS
+        //// XSS
+        //[HttpPost("comments")]
+        //public ContentResult AddComment([FromBody] string comment)
+        //{
+        //    return new ContentResult
+        //    {
+        //        Content = $"<div class='comment'>{comment}</div>",
+        //        ContentType = "text/html"
+        //    };
+        //}
+
         [HttpPost("comments")]
-        public ContentResult AddComment([FromBody] string comment)
+        [Consumes("application/x-www-form-urlencoded")]
+        public ContentResult AddComment([FromForm] string comment)
         {
+            var html = $@"
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Commentaire ajouté</title>
+            </head>
+            <body>
+                <h1>Votre commentaire :</h1>
+                <div class='comment'>{comment}</div>
+                
+                <h2>Ajouter un autre commentaire :</h2>
+                <form method='post' action='/api/users/comments'>
+                    <textarea name='comment'></textarea>
+                    <button type='submit'>Envoyer</button>
+                </form>
+            </body>
+            </html>";
+
             return new ContentResult
             {
-                Content = $"<div class='comment'>{comment}</div>",
-                ContentType = "text/html"
+                Content = html,
+                ContentType = "text/html",
+                StatusCode = 200
             };
         }
 

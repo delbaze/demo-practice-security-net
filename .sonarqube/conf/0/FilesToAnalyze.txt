@@ -1,0 +1,16 @@
+﻿C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\Controllers\UsersController.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\Data\ApplicationDbContext.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\Migrations\20250202120031_InitialCreate.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\Migrations\20250202120031_InitialCreate.Designer.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\Migrations\ApplicationDbContextModelSnapshot.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\Models\User.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\Program.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\obj\Debug\net9.0\demo-practice-security-net.GlobalUsings.g.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\obj\Debug\net9.0\demo-practice-security-net.AssemblyInfo.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\obj\Debug\net9.0\demo-practice-security-net.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\appsettings.Development.json
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\appsettings.json
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\.gitignore
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\demo-practice-security-net.http
+C:\Users\david\Desktop\Gaia\GIT\demo-practice-security\demo-practice-security-net\Properties\launchSettings.json
